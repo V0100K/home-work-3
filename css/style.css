@@ -31,18 +31,15 @@ p {
     padding: 0;
 }
 
+.list h3 {
+    color: var(--title-text-color);
+}
+
 .list,
 a {
     list-style: none;
     text-decoration: none;
     color: var(--main-text-color);
-    font-weight: 500;
-    line-height: 1.5;
-    letter-spacing: 0.02em;
-}
-
-.list {
-    color: var(--main-text-color); /*стили списков*/
     font-weight: 500;
     line-height: 1.5;
     letter-spacing: 0.02em;
@@ -160,8 +157,18 @@ a {
 }
 
 /* ============================ADVANTAGES=========================== */
-.hidden {
-    display: none; /*WARNING!!!! */
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden; /*WARNING!!!! */
 }
 
 .advantages-list {
@@ -309,9 +316,8 @@ address {
 /*.work-eamples-item: (3n+2) {
     padding-right: 15px;
     padding-left: 15px; */
-}
 
-.work-eamples-item h3 {
+.work-examples-item-title h3 {
     color: var(--title-text-color);
     font-weight: 700;
     font-size: 18px;
@@ -327,5 +333,4 @@ address {
     padding-top: 20px;
     padding-bottom: 20px;
     border-bottom: 1px solid #ececec;
-
 }
