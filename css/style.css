@@ -52,7 +52,7 @@ a {
     padding-right: 15px;
     margin: 0 auto;
 }
-.section {
+section {
     padding-top: 94px;
     padding-bottom: 94px;
 }
@@ -140,6 +140,8 @@ a {
     max-width: 1600px;
     text-align: center; /*кнопка по центру */
     margin: 0 auto; /*секция по центру */ /*задана ширина 1600+ марджин+ ограничения текста */
+    padding-top: 200px;
+    padding-bottom: 200px;
 }
 
 .hero-main {
@@ -154,8 +156,8 @@ a {
     letter-spacing: 0.06em;
     text-transform: uppercase;
     color: var(--wite-color);
-    padding-top: 200px;
-    max-width: 700px;
+    //padding-top: 200px;
+    width: 700px;
     margin: 0 auto;
 }
 
@@ -165,7 +167,6 @@ a {
     padding: 10px 32px 10px 32px;
 
     margin-top: 30px;
-    margin-bottom: 107px;
 
     background-color: var(--accent-text-color);
     font-size: 16px;
@@ -173,7 +174,6 @@ a {
     line-height: 1.9;
     color: var(--wite-color);
     cursor: pointer;
-    margin-bottom: 200px;
 }
 
 .hero-button:hover,
@@ -218,8 +218,9 @@ a {
 
 /* ============================OURS SERVISES=========================== */
 
-.services .text-minor {
+.text-minor {
     text-align: center;
+    margin-bottom: 30px;
 }
 
 .services-list {
@@ -244,8 +245,9 @@ a {
 .team {
     background-color: #f5f4fa;
 }
-.team .text-minor {
+.text-minor {
     text-align: center;
+    margin-bottom: 30px;
 }
 .team-list {
     display: flex;
@@ -268,10 +270,15 @@ a {
     max-width: 270px;
 }
 
+.team-item h3 {
+    margin-bottom: 10px;
+}
 /* ============================FOOTER=========================== */
 footer {
     background-color: var(--bgr-footer-color);
     font-style: normal;
+    padding-top: 60px;
+    padding-bottom: 60px;
 }
 .footer-logo {
     display: block;
@@ -281,8 +288,7 @@ footer {
     font-size: 26px;
     line-height: 1.2;
     text-decoration: none;
-    padding-top: 60px;
-    padding-bottom: 20px;
+    margin-bottom: 20px;
 }
 
 .footer-logo-blue {
@@ -301,10 +307,10 @@ address {
     font-style: normal;
 }
 .footer-list .footer-item + .footer-item {
-    margin-top: 10px;
+    margin-top: 9px;
 }
-.last {
-    padding-bottom: 60px;
+address p {
+    margin-bottom: 9px;
 }
 
 /* =============================================Potfolio-page============================================ */
@@ -316,7 +322,7 @@ address {
 .portfolio-filter-list {
     display: flex; /*список в строку дал ul */
     justify-content: center; /*центровка */
-    padding-bottom: 34px;
+    margin-bottom: 34px;
 }
 .portfolio-filter-list li + li {
     margin-left: 10px;
@@ -367,6 +373,7 @@ address {
     font-weight: 400;
     font-size: 16px;
     line-height: 1.9;
+    margin-bottom: 4px;
 }
 
 .work-examples-item-title {
