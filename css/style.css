@@ -16,6 +16,7 @@ body {
 }
 img {
     display: block;
+    width: 100%;
 }
 /* h1,
 h2,
@@ -129,10 +130,12 @@ a {
 }
 
 /* =======================HERO================  доработать ФОН BUTTOn И ОТСТУПЫ==== */
+
 .hero {
     background-color: #2f303a;
-
+    max-width: 1600px;
     text-align: center; /*кнопка по центру */
+    margin: 0 auto; /*секция по центру */ /*задана ширина 1600+ марджин+ ограничения текста */
 }
 
 .hero-main {
@@ -148,6 +151,8 @@ a {
     text-transform: uppercase;
     color: var(--wite-color);
     padding-top: 200px;
+    max-width: 700px;
+    margin: 0 auto;
 }
 
 .hero-button {
@@ -167,6 +172,11 @@ a {
     margin-bottom: 200px;
 }
 
+.hero-button:hover,
+.hero-button:focus {
+    background-color: #188ce8;
+}
+
 /* ============================ADVANTAGES=========================== */
 .visually-hidden {
     position: absolute;
@@ -183,7 +193,10 @@ a {
 }
 
 .advantages-list {
-    display: inline-flex;
+    /* add formula calc  + margin*/
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -30px;
 }
 
 .advantages h3 {
@@ -195,7 +208,8 @@ a {
     padding-bottom: 10px;
 }
 .advantages-item {
-    max-width: 270px;
+    width: calc((100% - 120px) / 4);
+    margin-left: 30px;
 }
 
 /* ============================OURS SERVISES=========================== */
@@ -206,8 +220,11 @@ a {
 
 .services-list {
     display: flex;
+    flex-wrap: wrap;
+    margin-left: -30px;
 }
-.services-list .services-item + .services-item {
+.services-item {
+    width: calc((100% - 90px) / 3); /* add formula calc  + margin  ---.team-list .team-item + .team-item */
     margin-left: 30px;
 }
 
@@ -228,9 +245,12 @@ a {
 }
 .team-list {
     display: flex;
+    flex-wrap: wrap;
+    margin-left: -30px;
 }
 
-.team-list .team-item + .team-item {
+.team-item {
+    width: calc((100% - 120px) / 4); /* add formula calc  + margin  ---.team-list .team-item + .team-item */
     margin-left: 30px;
 }
 
@@ -240,7 +260,7 @@ a {
 }
 
 .team-item {
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Параметры тени */
+    box-shadow: 0 2px 10px -5px rgba(0, 0, 0, 0.4); /* Параметры тени */
     max-width: 270px;
 }
 
@@ -284,16 +304,19 @@ address {
 }
 
 /* =============================================Potfolio-page============================================ */
+
+.portfolio-filter {
+    display: flex;
+}
+
 .portfolio-filter-list {
     display: flex; /*список в строку дал ul */
     justify-content: center; /*центровка */
     padding-bottom: 34px;
 }
-
 .portfolio-filter-list li + li {
     margin-left: 10px;
 }
-
 .btn-filter {
     color: var(--title-text-color);
     background-color: #f5f4fa;
@@ -314,19 +337,19 @@ address {
     box-shadow: 0 10px 10px -5px rgba(0, 0, 0, 0.3); /* Параметры тени */
 }
 
-/*================== work examples ================*/
-.work-eamples-list {
+/* =============================================Potfolio-page============================================ */
+
+.work-examples-list {
     display: flex;
     flex-wrap: wrap;
-}
-.work-eamples-item {
-    margin-right: 30px;
-    max-width: 370px;
-    margin-bottom: 30px;
+    margin-left: -30px;
+    margin-top: -30px;
 }
 
-.work-eamples-item:nth-child(3n) {
-    margin-right: 0;
+.work-examples-item {
+    width: calc((100% - 90px) / 3);
+    margin-left: 30px;
+    margin-top: 30px;
 }
 
 .work-examples-item-title h3 {
@@ -343,7 +366,9 @@ address {
 }
 
 .work-examples-item-title {
-    padding-top: 20px;
-    padding-bottom: 20px;
-    border-bottom: 1px solid #ececec;
+    padding: 20px 24px;
+    border: 1px solid #eeeeee;
 }
+
+/* =============================================Musor============================================ */
+/* =============================================Musor============================================ */
